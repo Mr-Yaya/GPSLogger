@@ -38,7 +38,7 @@
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:id="@+id/id_about_imageView_icon"
-            android:src="@mipmap/gps_logger_big"
+            android:src="@drawable/mw_gps_logger"
             android:layout_gravity="center_horizontal" />
 
         <TextView

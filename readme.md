@@ -15,7 +15,7 @@ The app is 100% free and open source.
 
 For further information about this app you can read [this article](https://www.basicairdata.eu/projects/android/android-gps-logger/).<br>
 [Here](https://www.basicairdata.eu/projects/android/android-gps-logger/getting-started-guide-for-gps-logger/) you can find a getting started guide.<br><br>
-The application is freely downloadable from [Google Play(tm)](https://play.google.com/store/apps/details?id=eu.basicairdata.graziano.gpslogger) or directly here in this repository in /apk folder.<br>
+The application is freely downloadable from [Google Play(tm)](https://play.google.com/store/apps/details?id=eu.ybenouag.gpslogger) or directly here in this repository in /apk folder.<br>
 You can install GPS Logger on your smartphone in one step, using the Google Store [QR-Code](https://github.com/BasicAirData/GPSLogger/blob/master/screenshots/qrcode%20-%20Google%20Store.png) or the latest APK [QR-Code](https://github.com/BasicAirData/GPSLogger/blob/master/screenshots/qrcode.png);
 
 ## Translations

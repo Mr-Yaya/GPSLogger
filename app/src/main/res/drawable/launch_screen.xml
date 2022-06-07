@@ -24,10 +24,8 @@
   <!-- The background color -->
   <item android:drawable="@color/textColorPrimary"/>
   <!-- App Logo -->
-  <item>
-    <bitmap
-      android:src="@mipmap/gps_logger_big"
+  <item
+      android:drawable="@drawable/mw_gps_logger"
       android:gravity="center"/>
-  </item>
 </layer-list>
 

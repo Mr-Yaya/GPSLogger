@@ -31,7 +31,7 @@
     android:orientation="vertical"
     android:focusable="false"
     android:descendantFocusability="blocksDescendants"
-    tools:context="eu.basicairdata.graziano.gpslogger.FragmentRecordingControls">
+    tools:context="eu.ybenouag.gpslogger.FragmentRecordingControls">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             android:layout_height="0dp"/>
 
         <TextView
-            android:id="@+id/id_textView_Placemarks"
+            android:id="@+id/id_textView_crewName"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
             android:textColor="@color/textColorPrimary"/>
 
         <TextView
-            android:id="@+id/id_textView_GeoPoints"
+            android:id="@+id/id_textView_division"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorRecControlBackground"
         android:baselineAligned="false"
-        android:weightSum="4">
+        android:weightSum="3">
 
         <TextView
             android:id="@+id/id_lock"
@@ -111,6 +111,7 @@
 
         <TextView
             android:id="@+id/id_stop"
+            android:visibility="invisible"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -118,24 +119,6 @@
             android:gravity="center_horizontal"
             app:drawableTopCompat="@drawable/ic_stop_24"
             android:text="@string/stop"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:paddingBottom="4dp"
-            android:paddingTop="5dp"/>
-
-        <TextView
-            android:id="@+id/id_annotate"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:gravity="center_horizontal"
-            app:drawableTopCompat="@drawable/ic_add_location_24dp"
-            android:text="@string/annotate"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="12sp"
             android:maxLines="1"

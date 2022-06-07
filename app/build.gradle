@@ -22,12 +22,26 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            keyAlias 'BumpsViewerGPSLoggerApp'
+            storeFile file(StorePath)
+            storePassword StorePass
+            keyPassword StorePass
+        }
+        release {
+            storeFile file(StorePath)
+            storePassword StorePass
+            keyAlias Alias
+            keyPassword StorePass
+        }
+    }
     compileSdkVersion 32
-    buildToolsVersion '32.0.0'
+    buildToolsVersion '32.1.0-rc1'
 
 
     defaultConfig {
-        applicationId "eu.basicairdata.graziano.gpslogger"
+        applicationId "eu.ybenouag.gpslogger"
         minSdkVersion 14
         targetSdkVersion 32
 
@@ -39,11 +53,14 @@ android {
 
         vectorDrawables.useSupportLibrary = true
 
+        multiDexEnabled = true
+
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ eventBusIndex : 'eu.basicairdata.graziano.gpslogger.EventBusIndex' ]
+                arguments = [ eventBusIndex : 'eu.ybenouag.gpslogger.EventBusIndex' ]
             }
         }
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
@@ -67,20 +84,34 @@ android {
     lint {
         abortOnError false
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.0'
     testImplementation 'junit:junit:4.13.2'
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.preference:preference:1.2.0'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.6.0'
 
-    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
 
-    implementation "org.greenrobot:eventbus:3.2.0"
-    annotationProcessor "org.greenrobot:eventbus-annotation-processor:3.2.0"
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.3.1'
+
+    implementation "com.googlecode.json-simple:json-simple:1.1.1"
+    implementation 'com.android.support:multidex:1.0.3'
+}
+
+configurations.all {
+    resolutionStrategy.dependencySubstitution {
+        substitute module('org.hamcrest:hamcrest-core:1.1') with module('junit:junit:4.10')
+    }
 }

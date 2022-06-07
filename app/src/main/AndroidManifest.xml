@@ -22,7 +22,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.basicairdata.graziano.gpslogger">
+    package="eu.ybenouag.gpslogger">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -83,7 +83,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="eu.basicairdata.graziano.gpslogger.fileprovider"
+            android:authorities="eu.ybenouag.gpslogger.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

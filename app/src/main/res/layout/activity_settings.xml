@@ -27,8 +27,8 @@
     android:id="@+id/id_appbarlayout2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    tools:context="eu.basicairdata.graziano.gpslogger.SettingsActivity">
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+    tools:context="eu.ybenouag.gpslogger.SettingsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/id_toolbar2"
@@ -36,7 +36,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:titleTextAppearance="@style/ToolbarTitle"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/Theme.MaterialComponents.Light" />
 
     <RelativeLayout
         android:id="@+id/id_preferences"

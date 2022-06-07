@@ -23,7 +23,7 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="eu.basicairdata.graziano.gpslogger.GPSActivity">
+    tools:context="eu.ybenouag.gpslogger.GPSActivity">
     <item
         android:id="@+id/cardmenu_view"
         android:icon="@drawable/ic_visibility_24dp"
